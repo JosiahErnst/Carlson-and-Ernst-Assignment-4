@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace C_and_E_KarateSchoolApp
 {
-    public partial class Master : System.Web.UI.Page
+    public partial class Master : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
