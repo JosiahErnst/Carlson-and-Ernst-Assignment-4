@@ -128,3 +128,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+C_and_E_KarateSchoolApp/KarateSchool(1).mdf
+C_and_E_KarateSchoolApp/KarateSchool(1)_log.ldf
