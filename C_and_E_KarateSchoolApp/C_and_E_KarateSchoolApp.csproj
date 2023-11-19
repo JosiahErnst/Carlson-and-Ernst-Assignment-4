@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,6 +71,7 @@
     <Content Include="Administrator info\Administrator.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Instructor.aspx" />
+    <Content Include="Logon.aspx" />
     <Content Include="Member.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -91,6 +93,18 @@
     <Compile Include="Instructor.aspx.designer.cs">
       <DependentUpon>Instructor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Karate.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Karate.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +124,14 @@
   <ItemGroup>
     <Content Include="Master.Master" />
     <Content Include="Administrator info\Web.config" />
+    <Content Include="Karate.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Karate.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Karate.dbml.layout">
+      <DependentUpon>Karate.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -121,6 +143,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
