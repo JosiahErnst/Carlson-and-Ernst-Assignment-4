@@ -67,18 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Administrator.aspx" />
+    <Content Include="Administrator info\Administrator.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Instructor.aspx" />
     <Content Include="Member.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator.aspx.cs">
+    <Compile Include="Administrator info\Administrator.aspx.cs">
       <DependentUpon>Administrator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrator.aspx.designer.cs">
+    <Compile Include="Administrator info\Administrator.aspx.designer.cs">
       <DependentUpon>Administrator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />
+    <Content Include="Administrator info\Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
