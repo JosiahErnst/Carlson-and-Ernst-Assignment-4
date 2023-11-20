@@ -8,14 +8,8 @@
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 </p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
-            <Columns>
-                <asp:BoundField DataField="SectionName" HeaderText="SectionName" SortExpression="SectionName" />
-                <asp:BoundField DataField="MemberFirstName" HeaderText="MemberFirstName" SortExpression="MemberFirstName" />
-                <asp:BoundField DataField="MemberLastName" HeaderText="MemberLastName" SortExpression="MemberLastName" />
-            </Columns>
+        <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:KarateSchoolConnectionString %>" ProviderName="<%$ ConnectionStrings:KarateSchoolConnectionString.ProviderName %>" SelectCommand="SELECT Section.SectionName, Member.MemberFirstName, Member.MemberLastName FROM Section INNER JOIN Member ON Section.Member_ID = Member.Member_UserID"></asp:SqlDataSource>
 </p>
 <p>
     &nbsp;</p>

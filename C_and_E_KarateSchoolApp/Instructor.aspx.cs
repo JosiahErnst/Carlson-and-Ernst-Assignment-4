@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -37,6 +38,21 @@ namespace C_and_E_KarateSchoolApp
                 string firstName = myUser.InstructorFirstName;
                 string lastName = myUser.InstructorLastName;
                 Label1.Text = firstName + " " + lastName;
+
+                var records = 
+                    from section in dbcon.Sections
+                    join member in dbcon.Members on section.Member_ID equals member.Member_UserID
+                    join instructor in dbcon.Instructors on section.Instructor_ID equals HttpContext.Current.Session["userID"]
+                    select new
+                    {
+                        SectionName = section.SectionName,
+                        MemberFirstName = member.MemberFirstName,
+                        MemberLastName = member.MemberLastName
+                    };
+
+                GridView1.DataSource = records;
+                GridView1.DataBind();
+                GridView1.Visible = true;
             }
         }
     }
